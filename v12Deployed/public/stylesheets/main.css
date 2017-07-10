@@ -10,3 +10,54 @@
 .delete-form {
     display: inline;
 }
+
+/* Flexbox grid fix */
+.flex-wrap {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+/*.glyphicon.glyphicon-search {*/
+/*    font-size: 20px;*/
+/*    vertical-align: middle;*/
+/*}*/
+
+/*Search Function FOR CAMPGROUNDS*/
+#campground-search {
+    margin: 10px 10px;
+}
+#campground-search-input {
+    width: 400px;
+}
+@media only screen and (max-width: 1028px) {
+    #campground-search-input {
+        width: 350px;
+    }
+}
+@media only screen and (max-width: 998px) {
+    #campground-search-input {
+        width: 250px;
+    }
+}
+@media only screen and (max-width: 978px) {
+    #campground-search-input {
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    #campground-search-input {
+        width: 250px;
+    }
+}
+/*@media only screen and (max-width: 396px) {*/
+/*    #campground-search-input {*/
+/*        width: 250px;*/
+/*    }*/
+/*}*/
+
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+

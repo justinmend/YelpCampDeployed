@@ -9,6 +9,7 @@ var express = require("express"),
     Campground = require("./models/campground"),
     Comment = require("./models/comment"),
     User = require("./models/user"),
+    //search = require("./public/scripts/search.js"), //Testing Search
     seedDB = require("./seeds");
 
 // Removes the mpromise is deprecated warning on the terminal
@@ -19,12 +20,15 @@ var commentRoutes = require("./routes/comments"),
     campgroundRoutes = require("./routes/campgrounds"),
     authRoutes = require("./routes/index");
 
-mongoose.connect("mongodb://localhost/yelp_camp_v12Deployed");
+var url = process.env.DATABASEURL || "mongodb://localhost/yelp_camp_v12Deployed";
+mongoose.connect(url);
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
+app.locals.moment = require('moment');
 // seedDB(); // Seed the database
 
 // PASSPORT CONFIGURATION
