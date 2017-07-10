@@ -20,7 +20,7 @@
                     <p>
                         <em>Submitted By <%= campground.author.username %>, <%= moment(campground.createdAt).fromNow() %></em>
                     </p>
-                    <% if(currentUser && campground.author.id.equals(currentUser._id)){ %>
+                    <% if(currentUser && campground.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
                         <a class="btn btn-xs btn-warning" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
                         <form class="delete-form" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
                             <button class="btn btn-xs btn-danger">Delete</button>
@@ -42,8 +42,8 @@
                             <p>
                                 <%= comment.text %>
                             </p>
-                            <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
-                                <a class="btn btn-xs btn-warning" 
+                            <% if(currentUser && comment.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %>
+                                <a class="btn btn-xs btn-warning"
                                     href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit">
                                     Edit
                                 </a>
@@ -82,7 +82,6 @@
             infowindow.open(map, marker);
         });
     }
-    // window.onload = initMap;
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBSMaFeazSbSihpXjj2nxZiYR1Qv-Kak-g&callback=initMap"></script>
 <!--END OF GOOGLE MAPS SCRIPTS-->

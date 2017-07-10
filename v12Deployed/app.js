@@ -9,10 +9,9 @@ var express = require("express"),
     Campground = require("./models/campground"),
     Comment = require("./models/comment"),
     User = require("./models/user"),
-    //search = require("./public/scripts/search.js"), //Testing Search
     seedDB = require("./seeds");
 
-// Removes the mpromise is deprecated warning on the terminal
+// Removes the mpromise is deprecated warning on the c9 ide terminal
 mongoose.Promise = global.Promise;
 
  // Requiring routes
@@ -29,7 +28,7 @@ app.use(express.static(__dirname + "/public"));
 app.use(methodOverride("_method"));
 app.use(flash());
 app.locals.moment = require('moment');
-// seedDB(); // Seed the database
+// seedDB(); // Seed the database - not needed anymore
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
@@ -55,10 +54,12 @@ app.use("/", authRoutes);
 app.use("/campgrounds", campgroundRoutes);
 app.use("/campgrounds/:id/comments", commentRoutes);
 
+// For running on c9 ide
 // app.listen(process.env.PORT, process.env.IP, function() {
 //     console.log("The YelpCamp Server Has Started.");
 // });
+
+// For running on Localhost
 app.listen(3001, 'localhost', function() {
-    // console.log("... port %d in %s mode", app.address().port, app.settings.env);
     console.log("The YelpCamp Server Has Started.");
 });
