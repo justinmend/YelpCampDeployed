@@ -1,5 +1,5 @@
 # YelpCamp
-Yelp for Campgrounds. A web application where you can rate and review campgrounds from all over the world. A YelpCamp clone with my own modifications. A fun project for the purpose of learning web development specifically learning CRUD and REST.
+Yelp for Campgrounds. A web application where you can rate and review campgrounds from all over the world. A YelpCamp clone with my own modifications. A fun project I tackled in "The Web Developer Bootcamp" for the purpose of learning web development, specifically to learn CRUD and REST.
 
 # Installing Dependencies
 - Make sure to install the required packages to properly run the application.
