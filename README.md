@@ -3,9 +3,9 @@ Yelp for Campgrounds.
 
 # Installing Dependencies
 - Make sure to install the required packages to properly run the application.
-- To do that, first go inside the folder of "v12YelpCampDeployed", or the folder of other versions of the YelpCamp depending which version you want to run. 
-- Once inside the folder, you should be able to see the "package.json" file. 
-- Once you find it, in the terminal, type "$ npm install". This will install all the required dependencies.
+  -  To do that, first go inside the folder of "v12YelpCampDeployed", or the folder of other versions of the YelpCamp depending which version you want to run. 
+  - Once inside the folder, you should be able to see the "package.json" file. 
+  - Once you find it, in the terminal, type "$ npm install". This will install all the required dependencies.
 
 # Installing Node.js
 - This application uses Node.js as the server platform.
